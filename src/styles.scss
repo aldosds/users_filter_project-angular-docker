@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "./styles/utils/text-align-center";
+
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +9,14 @@
   box-sizing: border-box;
 }
 
-:root {
-  font-size: 62.5%;
-}
+// :root {
+//   font-size: 62.5%;
+// }
 
 html, body { height: 100%; }
 body {
-  font-size: 1.6rem;
+  // font-size: 1.6rem;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
