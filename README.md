@@ -1,4 +1,34 @@
-# UsersFilterProject
+# Users Filte Project
+
+## For this project I am using Docker
+
+## Dockerfile
+
+```
+FROM node:20.16.0
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+RUN npm install -g @angular/cli@18.2.1
+COPY . .
+```
+
+## docker-compose.yml
+
+#### Note: Place the docker-compose.yml file outside the directory where the Dockerfile will be located
+
+```
+version: '3' # Set current version
+services: # Define services
+  angular-service: # Service name
+    container_name: users-filter # Container name
+    build: ./users-filter-project # Dockerfile Location
+    volumes: # Volumes
+      - './users-filter-project:/usr/src/app'
+    ports:
+      - '4200:4200' # Ports
+    command: >
+      bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 
