@@ -1,6 +1,6 @@
 # Users Filte Project
 
-## For this project I am using Docker
+## In this project I used Docker
 
 ## Dockerfile
 
