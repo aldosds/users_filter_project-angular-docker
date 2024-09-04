@@ -2,11 +2,11 @@
   <div class="container__left">
     <div class="top-div">
       <!-- Content of the top div -->
-       <app-filter></app-filter>
+       <app-filter (onFilter)="onFilter($event)"></app-filter>
     </div>
     <div class="main-left-div">
       <!-- Content of the left div (80% height) -->
-       <app-users-list (userSelected)="onUserSelected($event)"></app-users-list>
+       <app-users-list [usersList]="usersListFiltered" (userSelected)="onUserSelected($event)"></app-users-list>
     </div>
   </div>
   <div class="right-div">
